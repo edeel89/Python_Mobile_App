@@ -1,0 +1,5 @@
+#storing a string in a variable called "Greetings"
+Greetings = "Hello world!")
+
+#Printing the line
+print(Greetings)
