@@ -1,0 +1,296 @@
+<MySwiper@MDSwiperItem>
+
+    
+
+<MainMenu>:
+    id: main_win
+    
+    MDScreen:
+        name: "MainMenu"
+        MDNavigationLayout:
+
+            ScreenManager:
+
+                MDScreen:
+
+                    BoxLayout:
+                        orientation:'vertical'
+                        MDToolbar:
+                            title: '[b]Maid[/b][i]on[/i][b]Call[/b]'
+                            markup: True
+                            anchor_title: 'center'
+                            md_bg_color: 0,0,0,1
+                            type: "top"
+                            id: toolbar
+                            elevation: 10
+                            left_action_items: [['menu', lambda x: nav_drawer.set_state("open")]]
+                            right_action_items: [["magnify"]]
+                        Widget:
+                            size_hint_y: None
+                            height: 70
+
+                        
+                        MDLabel:
+                            id: welcome_label
+                            markup: True
+                            text: "[b]Hello Adeel![/b]"
+                            font_size: 45
+                            halign: 'center'
+                            size_hint_y: None
+                            height: self.texture_size[1]
+                            #padding_y: 5
+
+                        Widget:
+                            size_hint_y: None
+                            height: 35
+
+                        MDTextFieldRound:
+                            id: username
+                            hint_text: "Search your area"
+                            icon_right: "magnify"
+                            size_hint_x: None
+                            width: 650
+                            font_size: 40
+                            color_active: 1, 1, 1, 1
+                            pos_hint: {"center_x": 0.5}
+                            
+                        Widget:
+                            size_hint_y: None
+                            height: 30
+                        
+                        MDLabel:
+                            text:'------------------Services we offer!------------------'
+                            halign: 'center'
+                            size_hint_y: None
+                            height: self.texture_size[1]
+                            padding_y: 5
+                        Widget:
+                            size_hint_y: None
+                            height: 5
+                        GridLayout:
+                            cols: 4
+                            size: "400dp", "125dp"
+                            pos_hint: {"center_x": 0.5}
+                            size_hint:(None, None)
+                            #size: "95dp", "95dp"
+                            spacing: '10dp'
+                            padding: 25
+                            MDCard:
+                                id: cardmd
+                                #size: "95dp", "95dp"
+                                elevation: 10
+                                #padding: 10
+                                spacing: 5 
+                                border_radius: 25   
+                                radius: [20]
+                                BoxLayout:
+                                    orientation: 'vertical'
+                                    Image:
+                                        source: 'main_menu_icons/house_icon.png'
+                                        size_hint_y: None  # Tells the layout to ignore the size_hint in y dir
+                                        height: dp(75)
+                                    MDTextButton:
+                                        text: "Houses"
+                                        custom_color: 0, 1, 0, 1
+                                        pos_hint: {"center_x": .5}
+                                    Widget:
+                                        size_hint_y: None
+                                        height: 10
+                                
+                            MDCard:
+                                id: cardmd
+                                #size: "95dp", "95dp"
+                                elevation: 10
+                                #padding: 10
+                                spacing: 5 
+                                border_radius: 25   
+                                radius: [20]
+                                BoxLayout:
+                                    orientation: 'vertical'
+                                    Image:
+                                        source: 'main_menu_icons/office_icon.png'
+                                        size_hint_y: None  # Tells the layout to ignore the size_hint in y dir
+                                        height: dp(75)
+                                    MDTextButton:
+                                        text: "Offices"
+                                        custom_color: 0, 1, 0, 1
+                                        pos_hint: {"center_x": .5}
+                                    Widget:
+                                        size_hint_y: None
+                                        height: 10
+                            MDCard:
+                                id: cardmd
+                                #size: "95dp", "95dp"
+                                elevation: 10
+                                #padding: 10
+                                spacing: 5 
+                                border_radius: 25   
+                                radius: [20]
+                                BoxLayout:
+                                    orientation: 'vertical'
+                                    Image:
+                                        source: 'main_menu_icons/Hotel_icon.png'
+                                        size_hint_y: None  # Tells the layout to ignore the size_hint in y dir
+                                        height: dp(75)
+                                    MDTextButton:
+                                        text: "Hotels"
+                                        custom_color: 0, 1, 0, 1
+                                        pos_hint: {"center_x": .5}
+                                    Widget:
+                                        size_hint_y: None
+                                        height: 10
+                            MDCard:
+                                id: cardmd
+                                #size: "95dp", "95dp"
+                                elevation: 10
+                                #padding: 10
+                                spacing: 5 
+                                border_radius: 25   
+                                radius: [20]
+                                BoxLayout:
+                                    orientation: 'vertical'
+                                    Image:
+                                        source: 'main_menu_icons/corporate_icon.png'
+                                        size_hint_y: None  # Tells the layout to ignore the size_hint in y dir
+                                        height: dp(75)
+                                    MDTextButton:
+                                        text: "Corporate"
+                                        custom_color: 0, 1, 0, 1
+                                        pos_hint: {"center_x": .5}
+                                    Widget:
+                                        size_hint_y: None
+                                        height: 10
+
+                        
+                        MDSwiper:
+                            id: swiper
+                            items_spacing: 21
+                            height: dp(40)
+                            y: dp(20)
+                            elevation: 20
+                            width_mult: 1
+                            #set_current: 1
+                            
+                            MySwiper:
+                                FitImage:
+                                    source: "swiperitems/house.jpg"
+                                    radius: [20,]
+                            MySwiper:
+                                FitImage:
+                                    source: "swiperitems/corporate.jpg"
+                                    radius: [20,]
+                            MySwiper:
+                                FitImage:
+                                    source: "swiperitems/office.jpg"
+                                    radius: [20,]
+
+                            MySwiper:
+                                FitImage:
+                                    source: "swiperitems/hospital.jpg"
+                                    radius: [20,]
+
+                            MySwiper:
+                                FitImage:
+                                    source: "swiperitems/house.jpg"
+                                    radius: [20,]
+
+                        GridLayout:
+                            #orientation: 'horizontal'
+                            cols: 3
+                            size: (400,100)
+                            #size: "400dp", "100dp"
+                            size_hint:(None, None)
+                            pos_hint: {"center_x": .5}
+                            MDIconButton:
+                                icon: "arrow-left"
+                                on_release: root.BackButton()
+                            
+                            MDLabel:
+                                text: "Gallery"
+                                halign: 'center'
+                            
+                            MDIconButton:
+                                icon: 'arrow-right'
+                                on_release: root.NextButton()
+                            
+                        Widget:
+                            size_hint_y: None
+                            height: 5
+                                
+                        
+                        MDCard:
+                            size_hint: None, None
+                            size: "350dp", "85dp"
+                            pos_hint: {"center_x": 0.5, "center_y": 0.6}
+                            elevation: 20
+                            padding: 10
+                            spacing: 5
+                            orientation: 'horizontal' 
+                            border_radius: 25   
+                            radius: [20]
+
+                        Widget:
+                            size_hint_y: None
+                            height: 30   
+    #################################################################
+            MDNavigationDrawer:
+                id: nav_drawer
+                orientation: "vertical"
+                padding: "8dp"
+                spacing: "8dp"
+                Widget:
+                    size_hint_y: None
+                    height: 20
+
+                AnchorLayout:
+                    anchor_x: "center"
+                    size_hint_y: None
+                    height: avatar.height
+
+                    FitImage:
+                        id: avatar
+                        size_hint: None, None
+                        size: "100dp", "100dp"
+                        source: "profilepic_icon.png"
+
+                MDLabel:
+                    text: "Adeel Arshad"
+                    font_style: "H6"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    halign: 'center'
+
+                MDLabel:
+                    text: "edeel89@gmail.com"
+                    font_style: "Button"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    halign: 'center'
+                Widget:
+                    size_hint_y: None
+                    height: 20
+                ScrollView:
+                    MDList:
+                        
+                        OneLineListItem:
+                            text: 'Covid-19'
+                        OneLineListItem:
+                            text: 'Profile'
+                        OneLineListItem:
+                            text: 'Locations'
+                        OneLineListItem:
+                            text: 'Contact Us'
+                Widget:
+                    size_hint_y: None
+                    height: 20 
+                BoxLayout:
+                    orientation: 'vertical'
+                    spacing: '1dp'
+                    Image:
+                        source: 'darling.png'
+                        size_hint_y: None  # Tells the layout to ignore the size_hint in y dir
+                        height: dp(150)
+                    
+                    MDLabel:
+                        text:'Maintained by Adeel Arshad©'
+                        halign:'center'

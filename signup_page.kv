@@ -1,0 +1,139 @@
+#Creating a Screen
+MDScreen:   
+    name: "MainScreen"   
+    Image:
+        source: 'mainbg2.png'
+        allow_stretch: True
+        keep_ratio: False 
+    
+    #Creating the main Box in which everything resides  
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 30
+        
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+        #Creating a white color default Card
+        MDCard:
+            orientation: 'vertical'
+            id: cardmd
+            size_hint: None, None
+            size: "350dp", "600dp"
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+            elevation: 30
+            padding: 15
+            spacing: 5
+            border_radius: 35   
+            radius: [30]
+            
+            MDLabel:
+                text: 'Sign up'
+                halign: 'center'
+                font_style: 'H5'
+                size_hint_y: None
+                font_size: 65
+            Widget:
+                size_hint_y: None
+                height: 30
+            BoxLayout:
+                orientation: 'horizontal'
+                spacing: 70
+                padding: 30
+                
+                MDTextField:  ####Username#######
+                    hint_text: "First Name"
+                    mode: 'rectangle'
+                MDTextField:
+                    hint_text: "Last Name"
+                    mode: 'rectangle'                    
+            BoxLayout:
+                orientation:'vertical' 
+                spacing: 70
+                padding: 30                      
+                MDTextField:
+                    hint_text: "Username"
+                    size_hint_x: 1
+                    mode: 'rectangle'
+            BoxLayout:
+                orientation:'vertical'
+                spacing: 70
+                padding: 30
+                MDTextField:
+                    hint_text: "Email Address"
+                    size_hint_x: 1
+                    mode: 'rectangle'
+                   
+            BoxLayout:
+                orientation:'horizontal'
+                spacing: 70
+                padding: 30
+                MDTextField:
+                    hint_text: 'Password'
+                    mode: 'rectangle'
+                MDTextField:
+                    hint_text: 'Confirm Password'
+                    mode: 'rectangle'
+            BoxLayout:
+                orientation:'vertical'
+                spacing: 70
+                padding: 30
+                MDTextField:
+                    hint_text: "Street Address 1"
+                    mode: 'rectangle'
+                    size_hint_x: 1
+            BoxLayout:
+                orientation:'vertical'
+                spacing:70
+                padding:30   
+                MDTextField:
+                    hint_text: "Apt, or Building no #"
+                    mode: 'rectangle'
+                    size_hint_x: 1
+                    width: '320dp'
+                    pos_hint:{'center_x': 0.5}
+                    font_size: 30
+
+            BoxLayout:
+                orientation:'horizontal'
+                spacing: 70
+                padding: 30
+                MDTextField:
+                    hint_text: "State"
+                    mode: 'rectangle'
+                MDTextField:
+                    hint_text: "Zip code"
+                    mode: 'rectangle'
+                MDTextField:
+                    hint_text: "Country"
+                    mode: 'rectangle'
+            Widget: 
+                size_hint_y: None
+                height: 20
+            Button:
+                text: "Sumbit"
+                pos_hint: {'center_x': .5}
+                font_size: 40
+                size_hint_y: 0.6
+                size_hint_x: 0.32
+                background_normal: ''
+                background_color: (0, 0, 0, 1)
+            Widget:
+                size_hint_y: None
+                height: 30
+        Widget:
+            size_hint_y: None
+            height: 200
+        
+        MDLabel:
+            text: "All rights reserved"
+            halign: 'center'
+        Widget:
+            size_hint_y: None
+            height: 40
+            
+        MDLabel:
+            text: "Mainatined by Adeel Arshad"
+            halign: 'center'
+      
+        

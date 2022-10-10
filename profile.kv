@@ -1,0 +1,146 @@
+<OperatorWindow>:
+    id: main_win
+    MDScreen:
+        name: "MainScreen"
+        Image:
+            source: 'mainbg2.png'
+            allow_stretch: True
+            keep_ratio: False   
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: 30
+            padding: 20
+
+            MDCard:
+                size_hint: None, None
+                size: "350dp", "250dp"
+                pos_hint: {"center_x": 0.5, "center_y": 0.78}
+                elevation: 20
+                padding: 25
+                spacing: 5
+                orientation: 'vertical' 
+                border_radius: 60   
+                radius: [45] 
+                #background: 'MDcard1_design.jpg'
+                BoxLayout:
+                    orientation:'vertical'
+                    spacing: 10
+
+                    MDLabel:
+                        id: welcome_label
+                        markup: True
+                        text: "[b]Welcome Adeel![/b]"
+                        font_size: 37
+                        halign: 'center'
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        padding_y: 5
+                    Widget:
+                        size_hint_y: None
+                        height: 10
+                
+                    Image:
+                        source: 'profile_icon.jpg'
+                        size_hint_y: None  # Tells the layout to ignore the size_hint in y dir
+                        height: dp(140)  # The fixed height you want
+
+                    Widget:
+                        size_hint_y: None
+                        height: 10
+
+                    MDLabel:
+                        text:'1234 Windwood Drive\nNJ 08234, USA'
+                        font_size: 30
+                        halign: 'center'
+                        markup: True
+
+            ####    SECOND MDCARD    #####
+            MDCard:
+                size_hint: None, None
+                size: "350dp", "85dp"
+                pos_hint: {"center_x": 0.5, "center_y": 0.6}
+                elevation: 20
+                padding: 10
+                spacing: 5
+                orientation: 'horizontal' 
+                border_radius: 25   
+                radius: [20]
+                BoxLayout:
+                    orientation: 'vertical'
+                    #spacing: 10
+                    padding: 10
+                    Image:
+                        source: 'cart_design.png'
+                        size_hint_y: None  # Tells the layout to ignore the size_hint in y dir
+                        height: dp(40)
+                    Button:
+                        text:' Request'
+                        font_size: 30
+                        background_normal: ''
+                        background_color: (0, 0, 0, 0)
+                        color: 0 , 0 , 0 , 1
+
+                BoxLayout:
+                    orientation: 'vertical'
+                    #spacing: 10
+                    padding: 10
+                    Image:
+                        source: 'history_design.png'
+                        size_hint_y: None  # Tells the layout to ignore the size_hint in y dir
+                        height: dp(40)
+                    Button:
+                        text:'History'
+                        background_normal: ''
+                        background_color: (0, 0, 0, 0)
+                        color: 0, 0, 0, 1
+
+                BoxLayout:
+                    orientation: 'vertical'
+                    #spacing: 10
+                    padding: 10
+                    Image:
+                        source: 'contact_design.png'
+                        size_hint_y: None  # Tells the layout to ignore the size_hint in y dir
+                        height: dp(40)
+
+                    Button:
+                        text:'Contact Us'
+                        background_normal: ''
+                        background_color: (0, 0, 0, 0)
+                        color: 0, 0, 0, 1
+                BoxLayout:
+                    orientation: 'vertical'
+                    #spacing: 10
+                    padding: 10
+                    Image:
+                        source: 'settings_design.png'
+                        size_hint_y: None  # Tells the layout to ignore the size_hint in y dir
+                        height: dp(40)
+
+                    Button:
+                        text:'Settings'
+                        background_normal: ''
+                        background_color: (0, 0, 0, 0)
+                        color: 0, 0, 0, 1
+
+            MDCard:
+                size_hint: None, None
+                size: "350dp", "300dp"
+                pos_hint: {"center_x": 0.5, "center_y": 0.78}
+                elevation: 20
+                padding: 25
+                spacing: 5
+                orientation: 'vertical' 
+                border_radius: 60   
+                radius: [45] 
+                background: 'graph_design.png'
+            Widget:
+                size_hint_y: None
+                height: 10
+
+
+            
+            
+                
+
+                        
